@@ -1,0 +1,53 @@
+*,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: azure;
+  color: brown;
+  font-family: "Open Sans", sans-serif;
+}
+
+//h1 és p középre, position fixed
+
+h1, p {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: rotate(0deg) translate(-50%, -50%);
+    transform-origin: 0 0;
+}
+
+h1 {
+  font-weight: 800; //az importált legvastagabb Google font
+  font-size: 48px;
+}
+
+p {
+  font-weight: 300; //az importált legvékonyabb Google font
+  font-size: 48px;
+}
+
+/* a root kap egy clicked class-t, a p az óramutatóval egyezően 180 
+fokban a saját közepe körül prögjön, a h1  pedig az ellenkező irányba*/
+
+#root.clicked p {
+  animation: 5s myRotate infinite alternate;
+}
+
+@keyframes myRotate {
+  0% {
+    transform: rotate(0deg) translate(-50%, -50%);
+    
+  }
+  50% {
+    transform: rotate(180deg) translate(-50%, -50%);
+    
+  }
+  100% {
+    transform: rotate(360deg) translate(-50%, -50%);
+    
+  }
+}
+
+

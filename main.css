@@ -1,0 +1,69 @@
+@charset "UTF-8";
+*,
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: azure;
+  color: brown;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, p {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: rotate(0deg) translate(-50%, -50%);
+          transform: rotate(0deg) translate(-50%, -50%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 48px;
+}
+
+p {
+  font-weight: 300;
+  font-size: 48px;
+}
+
+/* a root kap egy clicked class-t, a p az óramutatóval egyezően 180 
+fokban a saját közepe körül prögjön, a h1  pedig az ellenkező irányba*/
+#root.clicked p {
+  -webkit-animation: 5s myRotate infinite alternate;
+          animation: 5s myRotate infinite alternate;
+}
+
+@-webkit-keyframes myRotate {
+  0% {
+    -webkit-transform: rotate(0deg) translate(-50%, -50%);
+            transform: rotate(0deg) translate(-50%, -50%);
+  }
+  50% {
+    -webkit-transform: rotate(180deg) translate(-50%, -50%);
+            transform: rotate(180deg) translate(-50%, -50%);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translate(-50%, -50%);
+            transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
+
+@keyframes myRotate {
+  0% {
+    -webkit-transform: rotate(0deg) translate(-50%, -50%);
+            transform: rotate(0deg) translate(-50%, -50%);
+  }
+  50% {
+    -webkit-transform: rotate(180deg) translate(-50%, -50%);
+            transform: rotate(180deg) translate(-50%, -50%);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translate(-50%, -50%);
+            transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
+/*# sourceMappingURL=main.css.map */
